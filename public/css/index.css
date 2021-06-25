@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(3, 3, 100);
+}
+
+header .right {
+    position: relative;
+    box-sizing: content-box;
+    top: -30px;
+    float: left;
+}
+
+header .right p {
+    text-transform: uppercase;
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+header .right p:hover {
+    color: yellow;
+}
+
+header .right p span {
+    text-transform: uppercase;
+    color: rgb(223, 238, 19);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+header .left {
+    position: relative;
+    float: right;
+    top: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .left i {
+    margin-right: 20px;
+    font-size: larger;
+    color: cornsilk;
+    cursor: pointer;
+}
+
+header .left .profile {
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+header .left .profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header .left button {
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(2, 104, 94);
+    margin-right: 10px;
+    margin-top: 2px;
+    transition: 0.5s;
+    transition-property: background-color;
+    cursor: pointer;
+}
+
+header .left button:hover {
+    background-color: turquoise;
+}
+
+header .sidenav label {
+    position: fixed;
+    left: 290px;
+    color: white;
+    top: 8px;
+}
+
+header .sidenav label i {
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+header .sidenav label :hover {
+    color: turquoise;
+}
+
+header .sidenav label #checklebel {
+    transition: all 2s linear;
+}
+
+#check:checked~header .sidenav label #checklebel {
+    transform: rotate(180deg);
+}
+
+nav {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    top: 50px;
+    background-color: rgb(76, 76, 240);
+    text-align: center;
+    overflow-y: scroll;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+nav .profile img {
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.profile span {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+}
+
+nav ul {
+    display: block;
+    z-index: 100;
+}
+
+nav ul li a {
+    margin-top: 15px;
+    width: 150px;
+    line-height: 70px;
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover {
+    background-color: rgb(12, 189, 171);
+}
+
+nav a i {
+    font-size: 22px;
+}
+
+nav a span {
+    font-size: 22px;
+    margin: 10px;
+}
+
+nav a .rotate {
+    transition: all 2s linear;
+}
+
+​ nav li {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .left i span .notify {
+    position: relative;
+    top: -10px;
+    color: crimson;
+    font-size: 10px;
+    transition: all .5s initial;
+    transform: rotate(-45deg);
+}
+
+.dropTrigger:hover {
+    color: red;
+}
+
+#check:checked~nav a .rotate {
+    transform: rotate(90deg);
+}
+
+#check:checked~nav {
+    width: 210px;
+    margin-left: -120px;
+}
+
+#check:checked~nav .main-menu a span {
+    display: none;
+}
+
+#check:checked~nav .sub-menu ul {
+    position: fixed;
+    background-color: aquamarine;
+    position: fixed;
+    left: 100px;
+    z-index: 100;
+}
+
+#check:checked~nav .sub-menu ul li a span {
+    position: relative;
+    display: inline-block;
+}
+
+#check:checked~nav .sub-menu ul li a i {
+    position: relative;
+    display: inline-block;
+    left: -10px
+}
+
+#check:checked~nav i {
+    position: relative;
+    font-size: 35px;
+    line-height: 70px;
+    left: 40px;
+    box-sizing: content-box;
+}
+
+#check:checked~nav .profile img {
+    position: relative;
+    left: 37px;
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+#check:checked~.bx {
+    transform: rotate(90deg);
+}
+
+#check:checked~.content {
+    position: fixed;
+    width: 1425px;
+    margin-left: -80px;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgb(199, 195, 195); */
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(4, 92, 83);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(12, 189, 171);
+}
+
+
+/* .content img {
+    width: 1480px;
+    height: 100%;
+} */
+
+#check {
+    display: none;
+}
+
+.profilenav {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px 50px 50px;
+    margin-top: 50px;
+    width: 300px;
+    background-color: rgb(235, 229, 229);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: none;
+    transition: all 2s ease-in-out;
+    z-index: 100;
+}
+
+.profilenav .details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(139, 139, 238);
+    border-bottom: 1px solid gray;
+}
+
+.profilenav .details div p {
+    color: white;
+}
+
+.profilenav .details div h3 {
+    color: white;
+}
+
+.profilenav .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px solid gray;
+}
+
+.profilenav .stats a {
+    text-decoration: none;
+}
+
+.profilenav .stats a:hover {
+    border-left: 5px solid rgb(3, 190, 60);
+    background-color: rgb(165, 239, 241);
+}
+
+.profilenav .stats i {
+    margin: 20px;
+    color: deepskyblue;
+}
+
+.profilenav .account {
+    border: none;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.profilenav .account a {
+    text-decoration: none;
+    width: 300px;
+}
+
+.profilenav .account a:hover {
+    border-left: 5px solid rgb(3, 190, 60);
+    background-color: rgb(165, 239, 241);
+}
+
+.profilenav .account i {
+    margin: 20px;
+    color: deepskyblue;
+}
+
+.profilenav .logout {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.profilenav .logout a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.profilenav .logout a:hover {
+    border-left: 5px solid rgb(3, 190, 60);
+    background-color: rgb(165, 239, 241);
+}
+
+.profilenav .logout i {
+    margin: 20px;
+    color: deepskyblue;
+}
+
+.profilenav .viewprofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.profilenav .viewprofile button {
+    height: 30px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: dodgerblue;
+    border: none;
+}
+
+.profilenav .details img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#leftnav {
+    display: none;
+}
+
+#leftnav:checked~.profilenav {
+    display: block;
+}
+
+.content {
+    position: fixed;
+    left: 250px;
+    top: 50px;
+    max-height: 100%;
+    width: 1350px;
+    display: grid;
+    grid-template-rows: 100px 250px 500px 200px;
+    overflow-y: scroll;
+    z-index: -100;
+}
+
+.dash-title {
+    background-color: lawngreen;
+}
+
+.content .dash-title .left {
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .dash-title .right {
+    position: relative;
+    height: 100px;
+    width: 500px;
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content .dash-title .right .primarystat {
+    height: 80px;
+    width: 200px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .dash-title .right .secondrystat {
+    height: 80px;
+    width: 200px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-stat {
+    background-color: rgb(252, 235, 0);
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dash-stat .icon img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.dash-stat .firststat {
+    height: 80px;
+    width: 200px;
+    background-color: mintcream;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgb(120, 122, 120);
+}
+
+.dash-stat .secndstat {
+    height: 80px;
+    width: 200px;
+    background-color: mediumaquamarine;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgb(120, 122, 120);
+}
+
+.dash-stat .thirdstat {
+    height: 80px;
+    width: 200px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgb(120, 122, 120);
+}
+
+.dash-stat .fourthstat {
+    height: 80px;
+    width: 200px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgb(120, 122, 120);
+}
+
+.dash-graph {
+    background-color: rgb(46, 0, 252);
+}
+
+.dash-others {
+    background-color: rgb(244, 0, 252);
+}
