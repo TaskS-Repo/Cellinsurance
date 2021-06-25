@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MobileController;
 use App\Http\Controllers\InsuranceController;
 
+use App\Http\Livewire\AddForm;
+use App\Http\Livewire\EditForm;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,5 +29,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/index/dashboard',[MobileController::class,'dashboard']);
 
+
+//Mobile Routes
 Route::get('/mobile',[MobileController::class,'mobileview']);
+Route::post('/edit/mobile/data',[EditForm::class,'render']);
+
+
+
+
+
 Route::get('/insurance',[InsuranceController::class,'insuranceview']);

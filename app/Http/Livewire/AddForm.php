@@ -25,7 +25,7 @@ class AddForm extends Component
         $mobile->name=$this->name;
         $mobile->save();
 
-        session()->flash('success','new Brand added Successfully');
+        session()->flash('Success','new Brand added Successfully');
 
     }
 }

@@ -96,7 +96,16 @@
     <script>
         function editData(id){
             $(function(){
-                $('.edit-container').show()
+                $('.edit-container').show();
+                 var url="{{ url('/') }}/edit/mobile/data";
+                $.ajax({
+                    type: "POST",
+                    url:url,
+                    headers: {
+                        'X-CSRF-TOKEN':'{{ csrf_token() }}'
+                    },
+                    data:{id:id},
+                })
             })
         }
     </script>

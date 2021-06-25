@@ -7,8 +7,8 @@
 
 @endif
 @if(Session::has('Success'))
-<div class="btn btn-info">
-    <p>{{ Session::get('Success') }}</p>
+<div class="btn btn-info sesion">
+    <p class="btn btn-info sesion">{{ Session::get('Success') }}</p>
 </div>
 @endif
 

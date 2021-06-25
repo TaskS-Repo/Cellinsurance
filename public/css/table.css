@@ -123,3 +123,7 @@ small {
     cursor: pointer;
     z-index: 100;
 }
+
+.sesion {
+    z-index: 100;
+}

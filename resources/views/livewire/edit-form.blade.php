@@ -4,19 +4,19 @@
         <button class="close-form"><i class="far fa-times-circle fa-1x"></i></button>
     </div>
     <div class="card-body">
-    <form action="" method="post" enctype="multipart/form">
+    <form wire:submit.prevent="update">
         <div class="form-group">
-            <label for="">Enter Your Email</label>
-            <input class="form-control" type="email" id="email" required>
+            <label for="">Edit Mobile Brand</label>
+            <input class="form-control" type="text" id="brand" value="{{ $mobile->brand }}" wire:model='brand' required>
             <small>Error is going disply here</small>
         </div>
         <div class="form-group">
-            <label for="">Enter your Name</label>
+            <label for="">Edit Mobile Brand</label>
             <input class="form-control" type="text" id="" required>
             <small>Error is going disply here</small>
         </div>
         <div class="form-group">
-            <label for=""></label>
+            <label for="">Edit Mobile Name</label>
             <input class="form-control" type="text" id="" required>
             <small>Error is going disply here</small>
         </div>
